@@ -17,6 +17,7 @@ export default function BTree({ func }: { func: string }) {
       if (cnt === 0) {
         if (i === func.length - 1)
           return <BTree func={func.slice(1, func.length - 1)} />
+        break
       }
     }
   }
