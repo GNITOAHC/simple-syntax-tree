@@ -1,8 +1,23 @@
 import React from 'react'
 
+function isVar(func: string): boolean {
+  if (func.length === 0) return false
+  if (func.length === 1) return true
+  for (let i = 0; i < func.length; i++) {
+    if (
+      func[i] === '+' ||
+      func[i] === '-' ||
+      func[i] === '*' ||
+      func[i] === '/'
+    )
+      return false
+  }
+  return true
+}
+
 export default function BTree({ func }: { func: string }) {
   if (func.length === 0) return <div></div>
-  if (func.length === 1)
+  if (isVar(func))
     return (
       <li>
         <a href="#">{func}</a>

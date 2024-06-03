@@ -8,7 +8,6 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col gap-9 items-center p-24 tree">
       <h1 className="text-4xl font-bold">Syntax Tree</h1>
-      <p>Only support single character for variable name.</p>
 
       <label>
         function:{' '}
